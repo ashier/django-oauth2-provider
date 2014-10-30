@@ -292,7 +292,7 @@ class Redirect(OAuthView, Mixin):
     an error.
     """
 
-    def error_response(self, error, mimetype='deprecated', status=400,
+    def error_response(self, error, content_type='deprecated', status=400,
             **kwargs):
         """
         Return an error response to the client with default status code of
@@ -456,7 +456,7 @@ class AccessToken(OAuthView, Mixin):
         """
         raise NotImplementedError
 
-    def error_response(self, error, mimetype='application/json', status=400,
+    def error_response(self, error, content_type='application/json', status=400,
             **kwargs):
         """
         Return an error response to the client with default status code of
